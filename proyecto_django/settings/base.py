@@ -25,12 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 with open("secret.json") as f:
     secret = json.loads(f.read())
 
+
 def get_secret(secret_name, secrets=secret):
     try:
         return secrets[secret_name]
     except:
         msg = "Error %s no existe" % secret_name
         raise ImproperlyConfigured(msg)
+
 
 SECRET_KEY = get_secret('SECRET_KEY')
 
@@ -45,7 +47,12 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'applications.ciudad',
+    'applications.pais',
+    'applications.idioma',
+    'applications.continente',
+)
 
 THIRD_PARTY_APPS = ()
 
