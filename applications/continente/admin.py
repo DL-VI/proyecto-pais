@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Continente
 
-# Register your models here.
+
+admin.site.register(Continente)
