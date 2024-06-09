@@ -7,7 +7,7 @@ class Continente(models.Model):
         'Nombre continente', max_length=20, unique=True)
     descripcion_continente = models.CharField(
         'Descripcion continente', max_length=50, unique=True)
-    continente_pais = models.ManyToManyField(Pais)
+    pais = models.ManyToManyField(Pais, related_name='continentes')
 
     def __str__(self):
         return f'{self.nombre_continente} - {self.descripcion_continente}'
