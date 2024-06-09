@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+
+class Ciudad(models.Model):
+    codigo_posta = models.CharField('Codigo postal', max_length=5, unique=True)
+    nombre_ciudad = models.CharField(
+        'Nombre ciudad', max_length=20, unique=True)
+    descripcion_ciudad = models.CharField('Descripcion ciudad', max_length=50)
+
+    def __str__(self):
+        return f'{self.codigo_posta} - {self.nombre_ciudad} - {self.descripcion_ciudad}'
