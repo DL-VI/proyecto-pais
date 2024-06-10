@@ -1,0 +1,14 @@
+<ul>
+  <p>Continentes</p>
+  {% for continente in continentes %}
+  <li>
+    {{ continente.nombre_continente }} - {{ continente.descripcion_continente }}
+    <ul>
+      <p>Paises:</p>
+      {% for pais in continente.pais.all %}
+      <li>{{ pais.nombre_pais }}</li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>

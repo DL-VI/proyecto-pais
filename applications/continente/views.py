@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Continente
 
-# Create your views here.
+
+class ListarContinente(ListView):
+    template_name = 'continente/continente.html'
+    context_object_name = 'continentes'
+    model = Continente
