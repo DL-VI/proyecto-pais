@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Pais
 
-# Create your views here.
+
+class TodosPaises(ListView):
+    template_name = 'pais/pais.html'
+    context_object_name = 'paises'
+    model = Pais

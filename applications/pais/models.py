@@ -7,5 +7,5 @@ class Pais(models.Model):
     nombre_pais = models.CharField('Nombre Pais', max_length=30, unique=True)
     idioma = models.ManyToManyField(Idioma, related_name='paises')
 
-    def __str__(self) -> str:
+    def __str__(self):
         return f'{self.codigo_pais} - {self.nombre_pais}'
