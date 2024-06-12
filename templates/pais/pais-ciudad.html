@@ -1,0 +1,14 @@
+<ul>
+  <p><strong>Paises</strong></p>
+  {% for pais in paises %}
+  <li>
+    {{ pais.nombre_pais }}
+    <ul>
+      <p><strong>Ciudades</strong></p>
+      {% for ciudad in pais.ciudades.all %}
+      <li>{{ ciudad.nombre_ciudad }}</li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>

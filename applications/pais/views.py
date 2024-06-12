@@ -3,6 +3,6 @@ from .models import Pais
 
 
 class TodosPaises(ListView):
-    template_name = 'pais/pais.html'
+    template_name = 'pais/pais-ciudad.html'
     context_object_name = 'paises'
     model = Pais

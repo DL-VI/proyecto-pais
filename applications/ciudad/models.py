@@ -8,7 +8,7 @@ class Ciudad(models.Model):
         'Nombre ciudad', max_length=20, unique=True)
     descripcion_ciudad = models.CharField('Descripcion ciudad', max_length=50)
     pais = models.ForeignKey(
-        Pais, on_delete=models.CASCADE, related_name='ciudades', default=1)
+        Pais, on_delete=models.CASCADE, related_name='ciudades')
 
     def __str__(self):
         return f'{self.codigo_posta} - {self.nombre_ciudad} - {self.descripcion_ciudad}'

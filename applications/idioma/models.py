@@ -1,13 +1,11 @@
 from django.db import models
-# from applications.pais.models import Pais
 
 
 class Idioma(models.Model):
-    codigoIdioma = models.CharField(
+    codigo_idioma = models.CharField(
         'Codigo Idioma', max_length=10)
-    nombreIdioma = models.CharField(
+    nombre_idioma = models.CharField(
         'Nombre Idioma', max_length=15, unique=True)
-    # idioma_pais = models.ForeignKey(Pais, on_delete=models.CASCADE, default=1)
 
     def __str__(self) -> str:
         return self.codigoIdioma + ' - ' + self.nombreIdioma
