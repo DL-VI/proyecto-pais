@@ -1,0 +1,14 @@
+<ul>
+  <p><strong>Idioma</strong></p>
+  {% for idioma in idiomas %}
+    <li>
+      {{ idioma.nombre_idioma }}
+      <ul>
+        <p><strong>Paises</strong></p>
+        {% for pais in idioma.paises.all %}
+          <li>{{ pais.nombre_pais }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>

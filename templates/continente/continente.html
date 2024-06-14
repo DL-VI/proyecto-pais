@@ -1,13 +1,13 @@
 <ul>
-  <p><strong>Continentes</strong></p>
+  <p><strong>Continente - descripcion</strong></p>
   {% for continente in continentes %}
-  <li>{{ continente.nombre_continente }} - {{ continente.descripcion_continente }}
-    <ul>
-      <p><strong>Paises:</strong></p>
-      {% for pais in continente.pais.all %}
-      <li>{{ pais.nombre_pais }}</li>
-      {% endfor %}
-    </ul>
-  </li>
+    <li>{{ continente.nombre_continente }} - {{ continente.descripcion_continente }}
+      <ul>
+        <p><strong>Paises:</strong></p>
+        {% for pais in continente.paises.all %}
+          <li>{{ pais.nombre_pais }}</li>
+        {% endfor %}
+      </ul>
+    </li>
   {% endfor %}
 </ul>
