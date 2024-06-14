@@ -1,14 +1,14 @@
+<h1>Buscar continente</h1>
+<form method="get">
+  {% csrf_token %}
+  <label>Continente</label>
+  <input type="text" id="continente" name="continente" required placeholder="escriba continente">
+  <button type="submit">Buscar</button>
+</form>
+
+<h2>Paises pertenecientes al continente</h2>
 <ul>
-  <p><strong>Paises</strong></p>
-  {% for pais in paises %}
-    <li>
-      {{ pais.nombre_pais }}
-      <ul>
-        <p><strong>Idiomas</strong></p>
-        {% for idioma in pais.idioma.all %}
-          <li>{{ idioma.nombre_idioma }}</li>
-        {% endfor %}
-      </ul>
-    </li>
+  {% for pais in mostrar_paises_continente %}
+  <li>{{ pais.nombre_pais }}</li>
   {% endfor %}
 </ul>
