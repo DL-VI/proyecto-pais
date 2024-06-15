@@ -1,0 +1,12 @@
+<ul>
+  {% for pais in mostrar_idiomas_pais %}
+    <li>
+      {{ pais.nombre_pais }}
+      <ul>
+        {% for idioma in pais.idioma.all %}
+          <li>{{ idioma.nombre_idioma }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>

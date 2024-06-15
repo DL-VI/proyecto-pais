@@ -4,7 +4,7 @@ from .import views
 app_name = 'pais_app'
 
 urlpatterns = [
-    path('paises/', views.MostrarContinentePais.as_view(), name='paises'),
-    path('actualizar_pais/<pk>', views.ActualizarPais.as_view()),
-    path('eliminar_pais/<pk>', views.EliminarPais.as_view()),
+    path('mostrar_paises/', views.MostrarContinentePais.as_view(), name='mostrar-paises'),
+    path('actualizar_pais/<pk>/', views.ActualizarPais.as_view()),
+    path('eliminar_pais/<pk>/', views.EliminarPais.as_view()),
 ]
